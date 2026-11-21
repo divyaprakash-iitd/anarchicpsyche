@@ -1,0 +1,20 @@
+{{/*
+  Every Markdown image in a post:  ![alt](photo.jpg "caption")
+  is shown full width (landscape) or up to 90% of the screen height
+  (portrait), never cropped. Tap to open the original.
+*/}}
+{{- $img := .Page.Resources.Get .Destination -}}
+{{- if $img -}}
+  {{- $src := partial "photo-oriented.html" $img -}}
+  {{- $ratio := div (float $src.Width) $src.Height -}}
+  <figure class="photo">
+    {{ partial "photo-img.html" (dict "img" $img "alt" .Text "sizes" (printf "min(100vw, %.1fvh)" (mul 90 $ratio))) }}
+    {{- with .Title }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+  </figure>
+{{- else if findRE "^(https?:)?//" .Destination -}}
+  <figure class="photo"><img src="{{ .Destination }}" alt="{{ .Text }}" loading="lazy">
+    {{- with .Title }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}</figure>
+{{- else -}}
+  {{- warnf "photo %q not found in %s" .Destination .Page.File.Dir -}}
+  <figure class="photo"><div class="photo-missing">Photo not added yet: {{ .Destination }}</div></figure>
+{{- end -}}

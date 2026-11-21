@@ -1,0 +1,35 @@
+{{/*
+  Photos side by side, all the same height, each keeping its shape:
+
+  {{< photos caption="optional caption" >}}
+  first.jpg
+  second.jpg
+  {{< /photos >}}
+*/}}
+{{- $imgs := slice -}}
+{{- $sum := 0.0 -}}
+{{- range split .Inner "\n" -}}
+  {{- with trim . " \t\r" -}}
+    {{- with $.Page.Resources.Get . -}}
+      {{- $src := partial "photo-oriented.html" . -}}
+      {{- $imgs = $imgs | append (dict "img" . "r" (div (float $src.Width) $src.Height)) -}}
+      {{- $sum = add $sum (div (float $src.Width) $src.Height) -}}
+    {{- else -}}
+      {{- warnf "photo %q not found in %s" . $.Page.File.Dir -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+<figure class="photo photo-row">
+  {{- if $imgs }}
+  <div class="photo-row-inner" style="max-width: min(100vw, {{ printf "%.1f" (mul 90 $sum) }}vh)">
+    {{- range $imgs }}
+    <div class="photo-cell" style="flex: {{ printf "%.4f" .r }} 1 0%">
+      {{ partial "photo-img.html" (dict "img" .img "sizes" (printf "%.0fvw" (mul 100 (div .r $sum)))) }}
+    </div>
+    {{- end }}
+  </div>
+  {{- else }}
+  <div class="photo-missing">Photos not added yet</div>
+  {{- end }}
+  {{- with .Get "caption" }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>

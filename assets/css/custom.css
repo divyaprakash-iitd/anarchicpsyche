@@ -1,0 +1,56 @@
+/* --- Reading column centred, so photos can break out to full width --- */
+#single_header,
+.article-content,
+#single_header ~ section > div,
+article > footer {
+  margin-inline: auto;
+}
+#single_header ~ section > div { width: 100%; }
+#single_header, .article-content, article > footer { max-width: 41rem; }
+html, body { overflow-x: clip; }
+
+/* --- Photos: edge to edge, never cropped --- */
+.article-content figure.photo {
+  width: 100vw;
+  max-width: none;
+  margin: 2.5rem 0 2.5rem calc(50% - 50vw);
+}
+.article-content figure.photo > img,
+.photo-cell img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 0;
+  cursor: zoom-in;
+}
+.article-content figure.photo > img { max-height: 90vh; }
+
+.photo-row-inner {
+  display: flex;
+  gap: 4px;
+  margin: 0 auto;
+}
+.photo-cell { min-width: 0; }
+.photo-cell img { width: 100%; }
+
+.article-content figure.photo figcaption {
+  max-width: 65ch;
+  margin: 0.6rem auto 0;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.photo-missing {
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  border: 1px dashed rgb(var(--color-neutral-400));
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Zoomed photo: fill the screen on a dark background */
+.medium-zoom-overlay { background: rgb(0 0 0 / 0.95) !important; }
