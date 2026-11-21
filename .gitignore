@@ -1,0 +1,9 @@
+/public/
+/resources/_gen/
+.hugo_build.lock
+# the WordPress media export is large; only the photos copied into posts are kept
+*.tar
+*.tar.gz
+*.zip
+/drafts/
+*.WordPress.*.xml

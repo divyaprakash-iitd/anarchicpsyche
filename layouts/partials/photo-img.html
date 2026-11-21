@@ -1,0 +1,28 @@
+{{/*
+  One <img> for a photo in a post.
+  The original file is never re-encoded: it is the largest srcset entry and
+  what opens when the reader taps the photo (data-zoom-src). Smaller copies
+  are made at quality 90 (see [imaging] in hugo.toml) so the page loads fast.
+  Params: img (page resource), alt, sizes (CSS sizes for srcset).
+*/}}
+{{- $img := .img -}}
+{{- $alt := .alt | default "" -}}
+{{- $src := partial "photo-oriented.html" $img -}}
+{{- if eq $img.MediaType.SubType "gif" -}}
+  <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
+       loading="lazy" decoding="async" data-zoom-src="{{ $img.RelPermalink }}">
+{{- else -}}
+  {{- $set := slice -}}
+  {{- $fallback := $src -}}
+  {{- range $w := slice 960 1600 2560 -}}
+    {{- if lt $w $src.Width -}}
+      {{- $r := $src.Resize (printf "%dx" $w) -}}
+      {{- $set = $set | append (printf "%s %dw" $r.RelPermalink $w) -}}
+      {{- if eq $w 1600 }}{{ $fallback = $r }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $set = $set | append (printf "%s %dw" $src.RelPermalink $src.Width) -}}
+  <img src="{{ $fallback.RelPermalink }}" srcset="{{ delimit $set ", " }}" sizes="{{ .sizes }}"
+       width="{{ $src.Width }}" height="{{ $src.Height }}" alt="{{ $alt }}"
+       loading="lazy" decoding="async" data-zoom-src="{{ $img.RelPermalink }}">
+{{- end -}}

@@ -1,0 +1,9 @@
+{{/* Phone photos often store rotation in EXIF. Browsers apply it to the
+     original, so the resized copies must be rotated the same way. */}}
+{{- $out := . -}}
+{{- if and (ne .MediaType.SubType "gif") (reflect.IsImageResourceWithMeta .) -}}
+  {{- if gt .Meta.Orientation 1 -}}
+    {{- $out = .Filter images.AutoOrient -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}
