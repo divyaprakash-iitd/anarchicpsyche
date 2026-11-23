@@ -1,15 +1,15 @@
 {{/*
-  Cusdis comments (no sign-in needed for readers).
-  1. Sign up at https://cusdis.com and add this website.
-  2. Paste your App ID below.
-  3. Set showComments = true in config/_default/params.toml.
-  New comments wait for your approval in the Cusdis dashboard.
+  Cusdis comments: readers comment without signing in; you approve each
+  one in the Cusdis dashboard. Turned on by cusdisAppId in
+  config/_default/params.toml (empty = no comment box).
 */}}
+{{- with site.Params.cusdisAppId -}}
 <div id="cusdis_thread"
   data-host="https://cusdis.com"
-  data-app-id="PASTE_YOUR_APP_ID"
-  data-page-id="{{ .File.UniqueID }}"
-  data-page-url="{{ .Permalink }}"
-  data-page-title="{{ .Title }}"
+  data-app-id="{{ . }}"
+  data-page-id="{{ $.File.UniqueID }}"
+  data-page-url="{{ $.Permalink }}"
+  data-page-title="{{ $.Title }}"
   data-theme="auto"></div>
 <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+{{- end -}}

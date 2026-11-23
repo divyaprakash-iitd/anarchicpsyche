@@ -53,5 +53,6 @@ hugo server        # Hugo extended 0.166-0.169
 
 ## Comments
 
-Sign up at cusdis.com, paste the App ID into `layouts/partials/comments.html`,
-then set `showComments = true` in `config/_default/params.toml`.
+Cusdis (cusdis.com). In `config/_default/params.toml` set `cusdisAppId` and
+`showComments = true`. New comments appear after you approve them in the
+Cusdis dashboard.
