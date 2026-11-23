@@ -1,9 +1,12 @@
 {{/* Phone photos often store rotation in EXIF. Browsers apply it to the
-     original, so the resized copies must be rotated the same way. */}}
+     original, so the resized copies must be rotated the same way.
+     Some files carry no metadata at all; those are used as they are. */}}
 {{- $out := . -}}
 {{- if and (ne .MediaType.SubType "gif") (reflect.IsImageResourceWithMeta .) -}}
-  {{- if gt .Meta.Orientation 1 -}}
-    {{- $out = .Filter images.AutoOrient -}}
+  {{- with .Meta -}}
+    {{- if gt .Orientation 1 -}}
+      {{- $out = $out.Filter images.AutoOrient -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 {{- return $out -}}
