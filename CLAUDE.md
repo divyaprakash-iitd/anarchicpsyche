@@ -4,8 +4,8 @@ Personal blog (trek diaries + life stories), moved from anarchicpsyche.wordpress
 to Hugo + Blowfish on GitHub Pages.
 
 - Repo: divyaprakash-iitd/anarchicpsyche (public)
-- Live: https://dpcfd.com/anarchicpsyche/ (served under dpcfd.com because the owner's
-  user-site repo has that custom domain)
+- Live: https://anarchicpsyche.me/ (custom domain set in repo Settings -> Pages; the old
+  https://dpcfd.com/anarchicpsyche/ address redirects there)
 - Owner: DP. Prefers concise, technical answers with code; clean minimal scripts.
 
 ## Working rules
@@ -87,7 +87,10 @@ to Hugo + Blowfish on GitHub Pages.
    "Admist", "out journey" -> "our journey" in two posts). Also suggested: day-wise
    `##` headings in the long trek posts, a trek summary box (duration, start, highest
    point, season), fewer full-width photos with the rest in rows.
-4. **Domain**: decision deferred. If DP buys one: set it as the Pages custom domain for
-   this repo; the workflow picks up the new base URL automatically.
+4. **Domain**: `anarchicpsyche.me` (bought Nov 2026). DNS at the registrar: apex A/AAAA
+   records to GitHub Pages, `www` CNAME -> `divyaprakash-iitd.github.io`. Custom domain is set
+   in repo Settings -> Pages (no CNAME file needed with Actions deploys); the workflow picks
+   up the base URL from configure-pages. When Waline is set up, use this domain in
+   `SITE_URL` / `SECURE_DOMAINS`.
 5. Optional cleanup: delete merged branches (`site-setup`, `https-baseurl`,
    `fix-photo-meta`, `build-timeout`).
