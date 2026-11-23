@@ -42,7 +42,9 @@ jobs:
           restore-keys: hugo-images-
 
       - name: Build
-        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        env:
+          BASE_URL: ${{ steps.pages.outputs.base_url }}
+        run: hugo --gc --minify --baseURL "${BASE_URL/#http:/https:}/"  # always https
 
       - uses: actions/upload-pages-artifact@v3
         with:
