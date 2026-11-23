@@ -6,7 +6,7 @@ theme = "blowfish"
 # The first build resizes ~150 large photos on a 2-core GitHub runner;
 # later builds reuse the cached copies and take seconds.
 timeout = "20m"
-baseURL = "https://divyaprakash-iitd.github.io/anarchicpsyche/"  # the deploy workflow overrides this
+baseURL = "https://anarchicpsyche.me/"  # the deploy workflow overrides this
 defaultContentLanguage = "en"
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
