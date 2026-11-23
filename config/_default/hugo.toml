@@ -23,8 +23,11 @@ enableEmoji = true
 
 [imaging]
   anchor = 'Center'
-  quality = 90
   resampleFilter = 'Lanczos'
+  [imaging.jpeg]
+    quality = 90
+  [imaging.webp]
+    quality = 90
 
 # Keep the old WordPress URLs (/2020/09/03/english-confusion/)
 [permalinks]
