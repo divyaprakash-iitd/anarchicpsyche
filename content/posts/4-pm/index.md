@@ -20,6 +20,8 @@ I woke up with a sweaty forehead. The fall in the dream felt very real. Maybe I 
 
 **4 PM**
 
+![](feature.jpg)
+
 In order to get some natural light to freshen up my senses, I pulled apart the curtains on the windows next to me. The sun was nearing the horizon, completing its last leg of the day's journey. In a moment the light from the sun went out and everything around me turned pitch black. After a moment's silence, the city erupted with roars of people from all around. My head started to hurt and I could feel darkness from the outside penetrating inside. I tried to shout but felt my consciousness fading away. The last thing I remembered was that I fell on my bed.
 
 I got up but still couldn't see. I started panicking. It's all black now. I dare not open my eyes. I mean how long can this last? I'll probably be finally awake in a few hours. It's not like time runs very slowly in dreams. Right???

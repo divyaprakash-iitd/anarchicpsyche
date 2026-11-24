@@ -99,7 +99,8 @@ to Hugo + Blowfish on GitHub Pages.
   Blowfish card thumbnails ignore EXIF orientation: if a cover has orientation > 1 (phone /
   iPad portrait shots), rotate it losslessly with `exiftran -ai feature.jpg` (no re-encode).
 - 4 PM: cover is DP's iPad sunset-through-window photo (Oct 2022); the old clock-sketch cover
-  is now `clock.jpeg`, shown in the post after the first "**4 PM**".
+  is now `clock.jpeg`, shown in the post after the first "**4 PM**"; the sunset photo
+  (`feature.jpg`) is also shown after the second "**4 PM**".
 - `tools/wp2hugo.py`: one-time WordPress XML -> Markdown converter (kept for record).
 - `tools/photos.tsv` + `import_photos.py`: copied the 147 used originals out of the
   WordPress media export (byte for byte). `HOME_PHOTO` there chose the home background.
