@@ -1,4 +1,4 @@
-# Anarchicpsyche
+# AnarchicPsyche
 
 Hugo + [Blowfish](https://blowfish.page) blog, published to GitHub Pages on every push to `main`.
 

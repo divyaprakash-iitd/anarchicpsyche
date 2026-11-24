@@ -2,7 +2,7 @@ disabled = false
 locale = "en"
 label = "English"
 weight = 1
-title = "Anarchicpsyche"
+title = "AnarchicPsyche"
 
 [params]
   displayName = "EN"

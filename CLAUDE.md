@@ -1,4 +1,4 @@
-# Anarchicpsyche blog: project notes for Claude
+# AnarchicPsyche blog: project notes for Claude
 
 Personal blog (trek diaries + life stories), moved from anarchicpsyche.wordpress.com
 to Hugo + Blowfish on GitHub Pages.
@@ -71,7 +71,10 @@ to Hugo + Blowfish on GitHub Pages.
   (Playwright + Chromium). Don't hand-edit generated files.
 - Weights by size: fine (original strokes) >= 200 px, regular for header/hero, bold for app
   icons, tiny for 16-32 px favicons. Site SVGs use `currentColor` + `aria-hidden`.
-- Wordmark: lowercase "anarchicpsyche" in Jost (OFL), outlined by `tools/brand/wordmark.py`
+- Name is spelled **AnarchicPsyche** everywhere (site title, wordmark, manifest). The mark is
+  an A + P monogram (A = long left leg + vertical, horizon as crossbar). DP chose to keep the
+  original drawing over clearer-AP redraws.
+- Wordmark: "AnarchicPsyche" in Jost (OFL), outlined by `tools/brand/wordmark.py`
   into `wordmark.json`.
 
 ## Content
