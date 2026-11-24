@@ -63,6 +63,9 @@ to Hugo + Blowfish on GitHub Pages.
   background is served as resized WebP (1280/1920/2560 srcset), not the multi-MB original.
   Re-copy and re-apply if the theme is updated.
 - `layouts/partials/favicons.html`: favicon/app-icon links (files in `static/`).
+- `layouts/_default/list.html`, `term.html`: copies of the Blowfish v3.10.0 templates; only change
+  is `GroupByDate "2006" "asc"`, so All posts / categories / tags list **oldest first** (DP's
+  request). The homepage "Recent" block stays newest first so new posts show up there.
 - **Videos page** (`/videos/`, menu item "Videos"): `content/videos/_index.md` (intro) +
   `layouts/videos/list.html`; the list of videos lives in `data/videos.yaml` (groups; `short: true`
   for vertical Shorts). Embeds use Blowfish's bundled lite-youtube (thumbnail only until clicked,
