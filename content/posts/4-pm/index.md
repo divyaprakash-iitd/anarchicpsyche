@@ -6,7 +6,7 @@ categories: ["Stories"]
 draft: false
 ---
 
-It has been quite a while and I have had enough rest, I thought to myself as I turned on my sides and tried to get a hold of my phone. It showed 4 O'clock in the evening. It indeed was time for me to end my siesta and get up. Lazily I put my foot down and proceeded towards the door leading to the bathroom to get fresh. I had a meeting to attend online and needed to make at least my face presentable.
+It has been quite a while and I have had enough rest, I thought to myself as I turned on my side and tried to get a hold of my phone. It showed 4 o'clock in the evening. It indeed was time for me to end my siesta and get up. Lazily I put my foot down and proceeded towards the door leading to the bathroom to get fresh. I had a meeting to attend online and needed to make at least my face presentable.
 
 I got to the door and held the doorknob but couldn't feel it. Things turned black and my eyes opened. I felt the warm bed underneath me. Turning around I saw the clock on the wall.
 
@@ -18,6 +18,6 @@ I woke up with a sweaty forehead. The fall in the dream felt very real. Maybe I 
 
 **4 PM**
 
-In order to get some natural light to freshen up my senses, I pulled apart the curtains on the windows next to me. The sun was nearing the horizon, completing it's last leg of the day's journey. In a moment the light from sun went out and everything around me turned pitch black. After a moment's silence, the city erupted with roars of people from all around. My head started to hurt and I could feel darkness from the outside penetrating inside. I tried to shout but felt my consciousness fading away. The last thing I remembered was that I fell on my bed.
+In order to get some natural light to freshen up my senses, I pulled apart the curtains on the windows next to me. The sun was nearing the horizon, completing its last leg of the day's journey. In a moment the light from the sun went out and everything around me turned pitch black. After a moment's silence, the city erupted with roars of people from all around. My head started to hurt and I could feel darkness from the outside penetrating inside. I tried to shout but felt my consciousness fading away. The last thing I remembered was that I fell on my bed.
 
-I got up but still couldn't see. I started panicking. It's all black now. I dare not open my eyes. I mean how long can this last? I'll probably be finally awake in a few hours. It's not like time runs very slowly in dreams. Right?? ?
+I got up but still couldn't see. I started panicking. It's all black now. I dare not open my eyes. I mean how long can this last? I'll probably be finally awake in a few hours. It's not like time runs very slowly in dreams. Right???

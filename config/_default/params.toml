@@ -28,7 +28,10 @@ disableTextInHeader = false
 # defaultBackgroundImage = "IMAGE.jpg" # used as default for background images
 # backgroundCanvas = false # render defaultBackgroundImage as a fixed backdrop on every page
 # defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
-# defaultSocialImage = "/android-chrome-512x512.png" # used as default for social media sharing (Open Graph and Twitter)
+# Share image for pages without a cover photo (built by tools/brand/build.js). Hugo's own
+# Open Graph template reads this; Blowfish's defaultSocialImage would add a second og:image
+# on posts, because it doesn't recognise feature.jpg as a cover.
+images = ["img/social.png"]
 hotlinkFeatureImage = false
 # Thumbnail aspect ratio as a number (e.g., "1.5", "1.0", "1.777")
 # thumbnailAspectRatio = "1.5"
@@ -84,7 +87,7 @@ forgejoDefaultServer = "https://codeberg.org"
   showDateOnlyInArticle = false
   showDateUpdated = false
   showAuthor = true
-  # showAuthorBottom = false
+  showAuthorBottom = true # author name at the end of posts, not the top
   showHero = false # the cover photo is used on cards; posts start with their own full-width photos
   # heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
