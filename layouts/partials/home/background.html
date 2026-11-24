@@ -1,6 +1,7 @@
 {{/*
   Copy of themes/blowfish/layouts/partials/home/background.html (Blowfish v3.10.0).
-  Only change: the big heading shows the logo instead of the author's name.
+  Changes: the big heading shows the logo instead of the author's name, and the
+  background image is served as resized WebP copies instead of the original file.
   If the theme is updated, re-copy the file and re-apply that change.
 */}}
 {{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
@@ -44,7 +45,19 @@
             <img
               id="background-image"
               class="nozoom mt-0 mr-0 mb-0 ml-0 h-[1000px] w-full object-cover"
-              src="{{ $homepageImage.RelPermalink }}"
+              {{/* Site override: serve resized copies (the original can be several MB). */}}
+              {{ $srcset := slice }}
+              {{ $src := $homepageImage }}
+              {{ if not (or $disableImageOptimization (eq $homepageImage.MediaType.SubType "svg")) }}
+                {{ range slice 1280 1920 2560 }}
+                  {{ if gt $homepageImage.Width . }}
+                    {{ $src = $homepageImage.Resize (printf "%dx webp q85" .) }}
+                    {{ $srcset = $srcset | append (printf "%s %dw" $src.RelPermalink .) }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+              src="{{ $src.RelPermalink }}"
+              {{ with $srcset }}srcset="{{ delimit . ", " }}" sizes="100vw"{{ end }}
               role="presentation"
               {{ if $style }}style="{{ $style | safeCSS }}"{{ end }}>
             <div
