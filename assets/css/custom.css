@@ -7,6 +7,7 @@ article > footer {
 }
 #single_header ~ section > div { width: 100%; }
 #single_header, .article-content, article > footer { max-width: 41rem; }
+.article-content ~ .author { max-width: 41rem; margin: 3rem auto 0; }
 html, body { overflow-x: clip; }
 
 /* --- Photos: edge to edge, never cropped --- */

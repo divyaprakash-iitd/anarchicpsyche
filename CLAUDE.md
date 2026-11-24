@@ -55,7 +55,8 @@ to Hugo + Blowfish on GitHub Pages.
   `assets/img/home.jpg`; cards on; article hero OFF (cover would duplicate the first
   photo); related posts, taxonomies, zen mode on; `showComments = false`;
   `showAuthorBottom = true` (DP doesn't want his name at the top);
-  `defaultSocialImage = "img/social.png"`.
+  `images = ["img/social.png"]` (share image fallback; not Blowfish's `defaultSocialImage`,
+  which duplicates og:image on posts).
 - `layouts/partials/home/background.html`: copy of the Blowfish v3.10.0 partial; only change
   is the homepage heading shows `assets/img/logo-stacked.svg` instead of the author name.
   Re-copy and re-apply if the theme is updated.
