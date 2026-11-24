@@ -16,6 +16,9 @@ title = "AnarchicPsyche"
 
 [params.author]
   name = "Divyaprakash"
+  links = [
+    { youtube = "https://www.youtube.com/@graduateexplorer" },
+  ]
 #   email = "youremail@example.com"
 #   image = "img/blowfish_logo.png"
 #   imageQuality = 96

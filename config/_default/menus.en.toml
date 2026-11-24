@@ -21,6 +21,11 @@
   weight = 20
 
 [[main]]
+  name = "Videos"
+  pageRef = "videos"
+  weight = 25
+
+[[main]]
   name = "All posts"
   pageRef = "posts"
   weight = 30

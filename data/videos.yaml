@@ -1,0 +1,52 @@
+# Videos page (content/videos/_index.md, layouts/videos/list.html).
+# Titles are as on YouTube. Thumbnails are fetched and resized at build time.
+# To add a video: add its id (the 11 characters after "watch?v=" or "/shorts/") and title.
+
+channel: https://www.youtube.com/@graduateexplorer
+
+groups:
+  - title: Treks
+    videos:
+      - { id: EsOlfwuXfpk, title: "Brahmataal Trek, October 2023" }
+      - { id: gnVpqKPt3No, title: "Kuwari Pass Trek: Day 0" }
+      - { id: Pm-OKKS878A, title: "Kuwari Pass Trek: Day 1 and 2" }
+      - { id: YdmYDM3w4RA, title: "Kuwari Pass Trek: Day 3" }
+      - { id: Mah0uMIL1m4, title: "Kuwari Pass Day: Day 4" }
+      - { id: Ec_gEkDPvws, title: "Har Ki Dun Trek [October 2022]" }
+      - { id: C3rl-rCCs6I, title: "Har ki Dun Trek: Preview" }
+
+  - title: Along the way
+    videos:
+      - { id: OhXFLXuw4mU, title: "Panoramic View of Himalayas from Karthik Swami Temple [Rudraprayag]" }
+      - { id: RcTV6yinX-4, title: "Final Stretch to Zero Point from Khaliya Top, Munsyari, Uttarakhand" }
+      - { id: OpSDq4eciQE, title: "View from Zero Point, khaliya Top, Munsyari, Uttarakhand" }
+      - { id: jZCOi6myc40, title: "Himalyan Range as Visible from Pauri Garhwal, Uttarakhand" }
+      - { id: bONMcuWq3Pg, title: "Waterfall on the way to Atri muni Temple from Anasuya Mata temple, Mandal, Uttarakhand" }
+      - { id: eeQIi109hq8, title: "Confluence of Balkhila river with Alaknanda below Gopeshwar Town" }
+      - { id: KPoKSr2VDBg, title: "Route to Office, Gopeshwar, Uttarakhand" }
+      - { id: mQdN5rjIJv8, title: "Scenic views on the way home from office, Gopeshwar, Uttarakhand" }
+      - { id: -4GRqwaxu2c, title: "Nuranang Falls, Arunachal Pradesh (Koyala Movie)" }
+      - { id: RyBYFBc6_lA, title: "Flower Blooming Time Lapse" }
+      - { id: qR0Lp11KwLE, title: "Parasailing in Andaman (Go-Pro)" }
+
+  - title: Shorts
+    short: true
+    videos:
+      - { id: 2DR_SQSgvnE, title: "Rudranath Trek: Mountain Pass on the way to Pitradhar from Panar Bugyal" }
+      - { id: 0AcU8oLH1Ak, title: "Rainy weather on the way to Valley of Flowers" }
+      - { id: sRT4aitcwxw, title: "View of Push Ganga as you emerge from the foliage of flowers on the Valley of Flowers trail" }
+      - { id: Y7oC5OAxFtQ, title: "Pushp Ganga at the end of Valley of Flowers trail" }
+      - { id: 10Q4fA3jEkU, title: "Vasudhara Falls, Mana, Badrinath, Uttarakhand" }
+      - { id: Lg5jYzwmEFI, title: "Vishnuprayag: Confluence of Dhauli Ganga and Alaknanda" }
+      - { id: akpdhnjsW1k, title: "Waterfall in Ghingharan, Chamoli, Uttarakhand" }
+      - { id: YhH17GhDVv8, title: "Birthi Falls, Munsyari, Uttarakhand" }
+      - { id: edn--OtlSMc, title: "Horses at Khaliya Top, Munsyari, Uttarakhand" }
+      - { id: z6hfXU5LkRc, title: "Shimmering of Bees (Metachronal Waves) to Ward off Predators" }
+      - { id: Kal32AbXE5M, title: "Flower Blooming Time Lapse" }
+      - { id: UBoQN9l2igw, title: "Journey from Majuli Island, on the Brahmaputra river, to Neemati Ghat, Jorhat, Assam" }
+
+  - title: Trek photography
+    channel: https://www.youtube.com/@graduatecomputations
+    channelName: Graduate Computations
+    videos:
+      - { id: yXBBz9JH2EI, title: "Identify Snow Peaks In Your Trek Pictures" }

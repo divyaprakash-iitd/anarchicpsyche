@@ -63,6 +63,14 @@ to Hugo + Blowfish on GitHub Pages.
   background is served as resized WebP (1280/1920/2560 srcset), not the multi-MB original.
   Re-copy and re-apply if the theme is updated.
 - `layouts/partials/favicons.html`: favicon/app-icon links (files in `static/`).
+- **Videos page** (`/videos/`, menu item "Videos"): `content/videos/_index.md` (intro) +
+  `layouts/videos/list.html`; the list of videos lives in `data/videos.yaml` (groups; `short: true`
+  for vertical Shorts). Embeds use Blowfish's bundled lite-youtube (thumbnail only until clicked,
+  then youtube-nocookie), loaded by the template itself. Thumbnails are committed in
+  `assets/img/videos/<id>.jpg` via `python3 tools/video_thumbs.py` (no network at build time;
+  missing ones fall back to YouTube's). Channels: Graduate Explorer (`@graduateexplorer`, trek
+  videos; also the YouTube icon in `params.author.links`) and Graduate Computations
+  (`@graduatecomputations`, one trek-photography video).
 
 ## Logo / brand
 

@@ -61,3 +61,24 @@ html, body { overflow-x: clip; }
 .home-logo { margin-top: 0.5rem; }
 .home-logo svg { display: block; height: 11rem; width: auto; margin: 0 auto; }
 @media (max-width: 640px) { .home-logo svg { height: 8.5rem; } }
+
+/* --- Videos page (layouts/videos/list.html) --- */
+.videos-page { max-width: 72rem; margin-inline: auto; }
+.video-group { margin-top: 3rem; }
+.video-group-note { margin-top: 0.25rem; font-size: 0.9rem; opacity: 0.8; }
+.video-group-note a, .video-channel a { text-decoration: underline; text-underline-offset: 3px; }
+.video-grid {
+  display: grid;
+  gap: 1.5rem 1.25rem;
+  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+}
+.video-grid.is-shorts { grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); }
+.video-card { margin: 0; }
+.video-card lite-youtube { max-width: none; border-radius: 0.5rem; background-size: cover; }
+.video-grid.is-shorts lite-youtube::after { padding-bottom: 177.78%; } /* 9:16 */
+.video-grid.is-shorts lite-youtube > iframe { aspect-ratio: 9 / 16; height: 100%; }
+.video-card figcaption { margin-top: 0.5rem; font-size: 0.9rem; line-height: 1.35; }
+.video-card figcaption a { color: inherit; }
+.video-card figcaption a:hover { text-decoration: underline; }
+.video-channel { margin: 3rem 0 1rem; text-align: center; }
