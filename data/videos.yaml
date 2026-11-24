@@ -1,8 +1,8 @@
 # Videos page (content/videos/_index.md, layouts/videos/list.html).
-# Titles are as on YouTube. Thumbnails are fetched and resized at build time.
-# To add a video: add its id (the 11 characters after "watch?v=" or "/shorts/") and title.
+# Titles are as on YouTube. To add a video: add its id (the 11 characters after
+# "watch?v=" or "/shorts/") and title, then run `python3 tools/video_thumbs.py`.
 
-channel: https://www.youtube.com/@graduateexplorer
+channel: https://www.youtube.com/@anarchicpsyche
 
 groups:
   - title: Treks

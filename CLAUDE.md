@@ -68,9 +68,11 @@ to Hugo + Blowfish on GitHub Pages.
   for vertical Shorts). Embeds use Blowfish's bundled lite-youtube (thumbnail only until clicked,
   then youtube-nocookie), loaded by the template itself. Thumbnails are committed in
   `assets/img/videos/<id>.jpg` via `python3 tools/video_thumbs.py` (no network at build time;
-  missing ones fall back to YouTube's). Channels: Graduate Explorer (`@graduateexplorer`, trek
-  videos; also the YouTube icon in `params.author.links`) and Graduate Computations
-  (`@graduatecomputations`, one trek-photography video).
+  missing ones fall back to YouTube's).
+- YouTube channels: **AnarchicPsyche** (`@anarchicpsyche`, renamed from Graduate Explorer in
+  Nov 2026; permanent URL youtube.com/channel/UCY3qNpr_MjV3uDYHNcyS4xw): trek videos, also the
+  YouTube icon in `params.author.links`. Graduate Computations (`@graduatecomputations`): one
+  trek-photography video.
 
 ## Logo / brand
 
