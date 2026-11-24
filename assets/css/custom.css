@@ -54,3 +54,9 @@ html, body { overflow-x: clip; }
 
 /* Zoomed photo: fill the screen on a dark background */
 .medium-zoom-overlay { background: rgb(0 0 0 / 0.95) !important; }
+
+/* --- Logo (inline SVGs from tools/brand/build.js, coloured by currentColor) --- */
+.logo svg { display: block; height: 2.5rem; width: auto; }
+.home-logo { margin-top: 0.5rem; }
+.home-logo svg { display: block; height: 11rem; width: auto; margin: 0 auto; }
+@media (max-width: 640px) { .home-logo svg { height: 8.5rem; } }

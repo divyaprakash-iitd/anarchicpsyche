@@ -53,7 +53,25 @@ to Hugo + Blowfish on GitHub Pages.
   Don't enable the TOC sidebar: it un-centres the column and breaks full-bleed photos.
 - `config/_default/params.toml`: homepage `layout = "background"` with
   `assets/img/home.jpg`; cards on; article hero OFF (cover would duplicate the first
-  photo); related posts, taxonomies, zen mode on; `showComments = false`.
+  photo); related posts, taxonomies, zen mode on; `showComments = false`;
+  `showAuthorBottom = true` (DP doesn't want his name at the top);
+  `defaultSocialImage = "img/social.png"`.
+- `layouts/partials/home/background.html`: copy of the Blowfish v3.10.0 partial; only change
+  is the homepage heading shows `assets/img/logo-stacked.svg` instead of the author name.
+  Re-copy and re-apply if the theme is updated.
+- `layouts/partials/favicons.html`: favicon/app-icon links (files in `static/`).
+
+## Logo / brand
+
+- `brand/`: logo suite (not published). `brand/original/ap_logo.png` = the WordPress logo,
+  byte for byte. `brand/README.md` = usage, weights, colours.
+- `tools/brand/build.js` generates everything (brand/svg, brand/png, site logo SVGs,
+  favicons, social.png) from measured geometry. Run `node tools/brand/build.js`
+  (Playwright + Chromium). Don't hand-edit generated files.
+- Weights by size: fine (original strokes) >= 200 px, regular for header/hero, bold for app
+  icons, tiny for 16-32 px favicons. Site SVGs use `currentColor` + `aria-hidden`.
+- Wordmark: lowercase "anarchicpsyche" in Jost (OFL), outlined by `tools/brand/wordmark.py`
+  into `wordmark.json`.
 
 ## Content
 
