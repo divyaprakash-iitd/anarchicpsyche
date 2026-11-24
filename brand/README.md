@@ -1,4 +1,4 @@
-# Anarchicpsyche logo suite
+# AnarchicPsyche logo suite
 
 A vector redraw of the original blog logo (`original/ap_logo.png`, from the
 WordPress site, October 2020), plus everything derived from it. All files are
@@ -11,9 +11,11 @@ node tools/brand/build.js      # needs Playwright + Chromium
 
 ## The mark
 
-A sun (circle with three hatch strokes) setting behind the horizon, with a peak
-whose apex is the sun's centre. The redraw sits on the original 489 x 452 grid,
-with positions and stroke widths measured from the original image.
+An A and P monogram for AnarchicPsyche, drawn as a scene: a sun (circle with three
+hatch strokes) setting behind the horizon, with a peak whose apex is the sun's centre.
+The A is the long left leg and the vertical, with the horizon as its crossbar.
+The redraw sits on the original 489 x 452 grid, with positions and stroke widths
+measured from the original image.
 
 | Weight | Stroke | Use it for | Detail |
 |---|---|---|---|
@@ -47,7 +49,7 @@ need bitmaps.
 - `favicon.svg`: transparent, switches ink/paper with the browser theme
 - `social.svg`: 1200 x 630 share card
 
-Wordmark: "anarchicpsyche" in Jost (SIL Open Font License), converted to outlines
+Wordmark: "AnarchicPsyche" in Jost (SIL Open Font License), converted to outlines
 by `tools/brand/wordmark.py`, so no font needs to be installed.
 
 ## On the website

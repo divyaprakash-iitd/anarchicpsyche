@@ -1,4 +1,4 @@
-// Builds the Anarchicpsyche logo suite from the mark's geometry.
+// Builds the AnarchicPsyche logo suite from the mark's geometry.
 //
 //   node tools/brand/build.js
 //
@@ -102,7 +102,7 @@ function wordmark(weight, x, y, xh, fill) {
 }
 
 // decorative: for copies inlined next to the site name (hidden from screen readers).
-function svg(box, body, { size, title = "Anarchicpsyche", extra = "", decorative = false } = {}) {
+function svg(box, body, { size, title = "AnarchicPsyche", extra = "", decorative = false } = {}) {
   const wh = size ? ` width="${size[0]}" height="${size[1]}"` : "";
   const a11y = decorative ? ` aria-hidden="true" focusable="false">` : ` role="img" aria-label="${title}"><title>${title}</title>`;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${box.join(" ")}"${wh}${a11y}${extra}${body}</svg>\n`;
@@ -242,8 +242,8 @@ async function main() {
   write("assets/img/logo-stacked.svg", stacked("regular", "currentColor", 300, { decorative: true }));
   write("static/favicon.svg", SVGS.favicon);
   write("static/site.webmanifest", JSON.stringify({
-    name: "Anarchicpsyche",
-    short_name: "Anarchicpsyche",
+    name: "AnarchicPsyche",
+    short_name: "AnarchicPsyche",
     icons: [
       { src: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png", purpose: "any maskable" },
       { src: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png", purpose: "any maskable" },

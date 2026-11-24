@@ -1,6 +1,6 @@
-"""Turn the "anarchicpsyche" wordmark into SVG outlines, so no font is needed at runtime.
+"""Turn the "AnarchicPsyche" wordmark into SVG outlines, so no font is needed at runtime.
 
-One-time step; the output (wordmark.json) is committed and read by build.mjs.
+One-time step; the output (wordmark.json) is committed and read by build.js.
 Font: Jost (SIL OFL), from the @fontsource/jost npm package.
 
   npm pack @fontsource/jost@5.2.5 && tar xzf fontsource-jost-5.2.5.tgz
@@ -13,7 +13,7 @@ from fontTools.ttLib import TTFont
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 
-TEXT = "anarchicpsyche"
+TEXT = "AnarchicPsyche"  # capital A and P echo the AP monogram in the mark
 WEIGHTS = (200, 300)
 
 
