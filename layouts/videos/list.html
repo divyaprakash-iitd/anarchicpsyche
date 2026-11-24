@@ -1,0 +1,56 @@
+{{/*
+  Videos page: groups and videos come from data/videos.yaml.
+  Each video is a lite-youtube embed (Blowfish's bundled lite-youtube-embed): only a
+  thumbnail until clicked, then a youtube-nocookie player. Thumbnails come from
+  assets/img/videos/ (tools/video_thumbs.py) and are served resized from this site.
+*/}}
+{{ define "main" }}
+  {{ $css := resources.Get "lib/lite-youtube-embed/lite-yt-embed.css" | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+  {{ $js := resources.Get "lib/lite-youtube-embed/lite-yt-embed.js" | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+  <link type="text/css" rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+
+  <article class="videos-page">
+    <header>
+      <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+      <div class="prose dark:prose-invert mt-3">{{ .Content }}</div>
+    </header>
+
+    {{ range hugo.Data.videos.groups }}
+      {{ $group := . }}
+      {{ $short := .short | default false }}
+      <section class="video-group">
+        <h2 class="text-2xl font-bold text-neutral-800 dark:text-neutral-200">{{ .title }}</h2>
+        {{ with .channel }}
+          <p class="video-group-note">
+            From my other channel,
+            <a href="{{ . }}" target="_blank" rel="noopener">{{ $group.channelName | default "YouTube" }}</a>.
+          </p>
+        {{ end }}
+        <div class="video-grid{{ if $short }} is-shorts{{ end }}">
+          {{ range .videos }}
+            {{/* Thumbnail from tools/video_thumbs.py; without it lite-youtube uses YouTube's. */}}
+            {{ $thumb := "" }}
+            {{ with resources.Get (printf "img/videos/%s.jpg" .id) }}
+              {{ $thumb = (.Resize (cond $short "360x webp q80" "720x webp q80")).RelPermalink }}
+            {{ end }}
+            <figure class="video-card">
+              <lite-youtube
+                videoid="{{ .id }}"
+                playlabel="Play: {{ .title }}"
+                params="rel=0"
+                {{ with $thumb }}style="background-image: url('{{ . }}')"{{ end }}></lite-youtube>
+              <figcaption>
+                <a href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" rel="noopener">{{ .title }}</a>
+              </figcaption>
+            </figure>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+
+    <p class="video-channel">
+      <a href="{{ hugo.Data.videos.channel }}" target="_blank" rel="noopener">More on YouTube →</a>
+    </p>
+  </article>
+{{ end }}
