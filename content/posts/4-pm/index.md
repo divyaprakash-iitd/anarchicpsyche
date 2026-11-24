@@ -12,6 +12,8 @@ I got to the door and held the doorknob but couldn't feel it. Things turned blac
 
 **4 PM**
 
+![](clock.jpeg)
+
 What a strange dream, I thought to myself. But afternoon naps usually are responsible for such variants of dreams. My wife was sleeping next to me. I wondered if I should wake her up and tell her about it. I decided to let it go and get on with the routine to freshen up. I put my foot down and fell into an endless void.
 
 I woke up with a sweaty forehead. The fall in the dream felt very real. Maybe I had made some noise in my dreams, as I could see my wife sitting next to me, trying to calm me down. I told her about the dream and she mocked me, thinking I was referring to the plot of the popular movie. I looked at the watch.
