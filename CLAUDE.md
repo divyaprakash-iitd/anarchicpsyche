@@ -52,13 +52,15 @@ to Hugo + Blowfish on GitHub Pages.
   with `margin-left: calc(50% - 50vw)`; `overflow-x: clip` on html/body; dark zoom overlay.
   Don't enable the TOC sidebar: it un-centres the column and breaks full-bleed photos.
 - `config/_default/params.toml`: homepage `layout = "background"` with
-  `assets/img/home.jpg`; cards on; article hero OFF (cover would duplicate the first
+  `assets/img/home.jpg` (DP's peak photo, Nov 2026; no longer the WordPress `HOME_PHOTO`, so
+  don't re-run `import_photos.py` over it); cards on; article hero OFF (cover would duplicate the first
   photo); related posts, taxonomies, zen mode on; `showComments = false`;
   `showAuthorBottom = true` (DP doesn't want his name at the top);
   `images = ["img/social.png"]` (share image fallback; not Blowfish's `defaultSocialImage`,
   which duplicates og:image on posts).
-- `layouts/partials/home/background.html`: copy of the Blowfish v3.10.0 partial; only change
-  is the homepage heading shows `assets/img/logo-stacked.svg` instead of the author name.
+- `layouts/partials/home/background.html`: copy of the Blowfish v3.10.0 partial; changes: the
+  homepage heading shows `assets/img/logo-stacked.svg` instead of the author name, and the
+  background is served as resized WebP (1280/1920/2560 srcset), not the multi-MB original.
   Re-copy and re-apply if the theme is updated.
 - `layouts/partials/favicons.html`: favicon/app-icon links (files in `static/`).
 
