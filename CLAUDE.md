@@ -108,19 +108,20 @@ to Hugo + Blowfish on GitHub Pages.
 
 ## Open tasks
 
-1. **Comments -> Waline** (decided). Readers must be able to comment without any account.
-   - Plan: Waline server on Vercel (Hobby, free, non-commercial only) + Neon Postgres
-     (free). Avoid LeanCloud (shuts down 12 Jan 2027). DP sets up Vercel/Neon and
-     registers first at `<serverURL>/ui/register` (first user = admin), then gives the
-     serverURL.
-   - Then: replace `layouts/partials/comments.html` (currently Cusdis, which is
-     abandoned) with the Waline client (`@waline/client@v3` from unpkg, `init({ el,
-     serverURL, path: location.pathname, dark: 'html.dark' })`), add a `walineServerURL`
-     param, remove `cusdisAppId`, set `showComments = true`.
-   - Delete the unmerged `cusdis-comments` branch.
-   - Later, if the site becomes commercial (DP may sell trek photos): move Waline off
-     Vercel Hobby, e.g. Heroku via GitHub Student Pack credits ($13/mo for 24 months;
-     Procfile `web: node node_modules/@waline/vercel/vanilla.js $PORT`).
+1. **Comments: done (Nov 2026), Waline.** Readers comment with just a name (email optional).
+   - Server: Vercel project `anarchicpsyche-comments` (Hobby; non-commercial only) +
+     Neon Postgres (free, Singapore), connected via the Vercel Marketplace with env prefix
+     `POSTGRES`. `walineServerURL = "https://anarchicpsyche-comments.vercel.app"` in
+     params.toml; `SECURE_DOMAINS` there = anarchicpsyche.me + the vercel.app domain (other
+     origins get 403, incl. localhost: test locally by mapping anarchicpsyche.me to 127.0.0.1).
+     DP moderates at `<walineServerURL>/ui`.
+   - Client: `layouts/partials/comments.html`, `@waline/client@3.16.2` from unpkg, keyed by
+     `location.pathname`, `dark: 'html.dark'`; colours in custom.css. `showComments = true`.
+   - Optional: Vercel Settings > Functions > region Singapore (next to the DB).
+   - If the site becomes commercial (DP may sell trek photos): move Waline off Vercel Hobby,
+     e.g. Heroku via GitHub Student Pack credits; Procfile
+     `web: node node_modules/@waline/vercel/vanilla.js $PORT`.
+   - Unmerged `cusdis-comments` branch is obsolete; delete it (proxy here can't delete branches).
 2. **Purge the WordPress XML from git history.** Commit `05e7e45` ("Add files via
    upload") contains `anarchicpsyche.WordPress.2026-11-21.xml` with 12 commenter emails,
    13 IPs and the drafts. It's removed from the tree but still in history. Needs a

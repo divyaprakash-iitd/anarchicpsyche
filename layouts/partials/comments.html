@@ -1,15 +1,28 @@
 {{/*
-  Cusdis comments (no sign-in needed for readers).
-  1. Sign up at https://cusdis.com and add this website.
-  2. Paste your App ID below.
-  3. Set showComments = true in config/_default/params.toml.
-  New comments wait for your approval in the Cusdis dashboard.
+  Waline comments: readers comment with just a name (email optional, no account).
+  Server: Vercel project "anarchicpsyche-comments" + Neon Postgres; moderate at
+  <walineServerURL>/ui. Comments are keyed by page path, so keep post URLs stable.
 */}}
-<div id="cusdis_thread"
-  data-host="https://cusdis.com"
-  data-app-id="PASTE_YOUR_APP_ID"
-  data-page-id="{{ .File.UniqueID }}"
-  data-page-url="{{ .Permalink }}"
-  data-page-title="{{ .Title }}"
-  data-theme="auto"></div>
-<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+{{ with site.Params.walineServerURL }}
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@3.16.2/dist/waline.css">
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@3.16.2/dist/waline.js';
+    init({
+      el: '#waline',
+      serverURL: '{{ . }}',
+      path: location.pathname,
+      dark: 'html.dark',
+      lang: 'en',
+      meta: ['nick', 'mail'],
+      requiredMeta: ['nick'],
+      imageUploader: false,
+      search: false,
+      locale: {
+        nick: 'Name',
+        mail: 'Email (optional)',
+        placeholder: 'Leave a comment. Just your name is enough; email is optional and never shown.',
+      },
+    });
+  </script>
+{{ end }}

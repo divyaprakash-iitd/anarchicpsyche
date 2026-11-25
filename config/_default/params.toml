@@ -46,6 +46,9 @@ fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384",
 giteaDefaultServer = "https://git.fsfe.org"
 forgejoDefaultServer = "https://codeberg.org"
 
+# Waline comment server (Vercel project anarchicpsyche-comments + Neon Postgres)
+walineServerURL = "https://anarchicpsyche-comments.vercel.app"
+
 [languageRedirect]
   enabled = false # Enable client-side language redirects for multilingual sites.
   storageKey = "blowfish_preferred_language" # localStorage key for manual language selections.
@@ -115,7 +118,7 @@ forgejoDefaultServer = "https://codeberg.org"
   showWordCount = true
   # sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"]
   showZenMode = true
-  showComments = false # set true after adding your Cusdis app id in layouts/partials/comments.html
+  showComments = true # Waline, see layouts/partials/comments.html and walineServerURL
   # externalLinkForceNewTab = false # disable to allow external links in the same tab (defaults to true)
 
 [list]
