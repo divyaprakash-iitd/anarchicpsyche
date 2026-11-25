@@ -84,11 +84,13 @@ html, body { overflow-x: clip; }
 .video-channel { margin: 3rem 0 1rem; text-align: center; }
 
 /* --- Comments (Waline) --- */
+.post-comments { max-width: 41rem; margin: 0 auto; }
+.post-comments hr { margin: 0 0 0.5rem; }
 #waline {
   --waline-theme-color: rgb(var(--color-primary-600));
   --waline-active-color: rgb(var(--color-primary-500));
   --waline-border-radius: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 0.25rem;
 }
 html.dark #waline {
   --waline-theme-color: rgb(var(--color-primary-400));
