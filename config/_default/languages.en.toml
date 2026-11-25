@@ -11,7 +11,7 @@ title = "AnarchicPsyche"
   dateFormat = "2 January 2006"
   logo = "img/logo.svg" # built by tools/brand/build.js; follows light/dark mode
   # secondaryLogo = "img/secondary-logo.png"
-  # description = "One line about the blog, used by search engines"
+  description = "Trek diaries from the Himalayas and stories from life."
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]
