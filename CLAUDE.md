@@ -54,7 +54,7 @@ to Hugo + Blowfish on GitHub Pages.
 - `config/_default/params.toml`: homepage `layout = "background"` with
   `assets/img/home.jpg` (DP's peak photo, Nov 2026; no longer the WordPress `HOME_PHOTO`, so
   don't re-run `import_photos.py` over it); cards on; article hero OFF (cover would duplicate the first
-  photo); related posts, taxonomies, zen mode on; `showComments = false`;
+  photo); related posts, taxonomies, zen mode on; `showComments = true` (Waline);
   `showAuthorBottom = true` (DP doesn't want his name at the top);
   `images = ["img/social.png"]` (share image fallback; not Blowfish's `defaultSocialImage`,
   which duplicates og:image on posts).
@@ -63,6 +63,9 @@ to Hugo + Blowfish on GitHub Pages.
   background is served as resized WebP (1280/1920/2560 srcset), not the multi-MB original.
   Re-copy and re-apply if the theme is updated.
 - `layouts/partials/favicons.html`: favicon/app-icon links (files in `static/`).
+- Google Analytics 4: `[services.googleAnalytics] ID = "G-TPR3Q60KG7"` in hugo.toml (property
+  "AnarchicPsyche" in DP's "My websites" GA account, next to his "dpcfd" property). Blowfish
+  adds the gtag only when `hugo.IsProduction`, so `hugo server` previews aren't tracked.
 - `layouts/_default/single.html`: copy of the Blowfish v3.10.0 post template; only change is the
   comments partial moved from the footer (after Related + prev/next) to right after the post.
 - `layouts/_default/list.html`, `term.html`: copies of the Blowfish v3.10.0 templates; only change

@@ -19,7 +19,6 @@ buildFuture = false
 
 enableEmoji = true
 
-# googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]
   pagerSize = 100
@@ -79,3 +78,8 @@ enableEmoji = true
       name = 'fragmentrefs'
       type = 'fragments'
       weight = 10
+
+# Google Analytics 4 (property "AnarchicPsyche" in DP's "My websites" account).
+# Blowfish adds the tag only in production builds, so `hugo server` previews aren't counted.
+[services.googleAnalytics]
+  ID = "G-TPR3Q60KG7"
