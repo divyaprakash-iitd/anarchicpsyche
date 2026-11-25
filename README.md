@@ -53,10 +53,5 @@ hugo server        # Hugo extended 0.166-0.169
 
 ## Comments
 
-Sign up at cusdis.com, paste the App ID into `layouts/partials/comments.html`,
-then set `showComments = true` in `config/_default/params.toml`.
-
-## Comments
-
 Readers can comment on every post with just a name (Waline on Vercel + Neon).
 How it works and how to moderate: [docs/comments.md](docs/comments.md).
