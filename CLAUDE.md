@@ -109,6 +109,7 @@ to Hugo + Blowfish on GitHub Pages.
 ## Open tasks
 
 1. **Comments: done (Nov 2026), Waline.** Readers comment with just a name (email optional).
+   - Plain-language explainer for DP: `docs/comments.md` (keep it in sync with changes).
    - Server: Vercel project `anarchicpsyche-comments` (Hobby; non-commercial only) +
      Neon Postgres (free, Singapore), connected via the Vercel Marketplace with env prefix
      `POSTGRES`. `walineServerURL = "https://anarchicpsyche-comments.vercel.app"` in
