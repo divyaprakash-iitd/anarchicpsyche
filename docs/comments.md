@@ -66,8 +66,9 @@ switched the comment box on:
 | `layouts/partials/comments.html` | The comment box: loads the Waline script and sets it up (name required, email optional, dark mode, image uploads and GIF search off) |
 | `assets/css/custom.css` | Makes the box use the blog's blue and dark-mode colours |
 
-Blowfish (the theme) automatically puts `comments.html` at the end of every post when
-`showComments` is on.
+The comment box appears right after each post (and the author line), before "Related".
+That position comes from `layouts/_default/single.html`, a copy of the theme's post
+template with only the comments moved up.
 
 ## Day to day
 
