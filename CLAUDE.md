@@ -63,8 +63,6 @@ to Hugo + Blowfish on GitHub Pages.
   background is served as resized WebP (1280/1920/2560 srcset), not the multi-MB original.
   Re-copy and re-apply if the theme is updated.
 - `layouts/partials/favicons.html`: favicon/app-icon links (files in `static/`).
-- `i18n/en.yaml`: overrides the theme's `footer.powered_by` to add "Built with Claude" (DP's
-  request; links to claude.ai). Other strings still come from the theme.
 - `layouts/_default/single.html`: copy of the Blowfish v3.10.0 post template; only change is the
   comments partial moved from the footer (after Related + prev/next) to right after the post.
 - `layouts/_default/list.html`, `term.html`: copies of the Blowfish v3.10.0 templates; only change
