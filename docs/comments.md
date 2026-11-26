@@ -79,9 +79,47 @@ template with only the comments moved up.
 - **Spam:** Waline filters spam with Akismet by default. To approve every comment by
   hand before it appears, add `COMMENT_AUDIT = true` in Vercel → Settings → Environment
   Variables, then redeploy.
-- **Email alerts for new comments** (optional): add the `SMTP_SERVICE`, `SMTP_USER`,
-  `SMTP_PASS` and `AUTHOR_EMAIL` settings in Vercel and redeploy. For Gmail, use an *app
-  password*, not your normal one.
+- **Email alerts for new comments** (optional, not set up): add the `SMTP_SERVICE`,
+  `SMTP_USER`, `SMTP_PASS` and `AUTHOR_EMAIL` settings in Vercel and redeploy. For Gmail,
+  use an *app password*, not your normal one.
+
+### Telegram alerts (set up)
+
+Every new comment arrives as a Telegram message from **your own bot** (made with
+@BotFather). Tapping the post name in the message opens the post.
+
+| Vercel setting | What it is |
+|---|---|
+| `TG_BOT_TOKEN` | The bot's token from @BotFather. **Secret**: anyone with it controls the bot |
+| `TG_CHAT_ID` | Your Telegram user id (from @userinfobot): where the bot sends messages |
+| `TG_TEMPLATE` | The message text in English (Waline's built-in one is Chinese) |
+
+`TG_TEMPLATE` (Telegram reads it as *MarkdownV2*, so avoid plain `.`, `!`, `-` in it,
+or the message fails to send):
+
+````
+💬 *New comment on [{{site.name}}]({{site.postUrl}})*
+
+*{{self.nick}}* wrote:
+
+```
+{{self.comment-}}
+```
+{{-self.commentLink}}
+*Email:* `{{self.mail}}`
+*Status:* {{self.status}}
+````
+
+Notes:
+
+- You must have tapped **Start** in the bot's chat once, or Telegram won't let it message you.
+- After changing any of these, **redeploy** and wait a minute or two for it to be
+  **Ready** before testing; until then the old version answers.
+- No alert is sent for comments Waline thinks are yours (logged in, or using the email in
+  `AUTHOR_EMAIL`). Test from a private tab with a made-up name and no email.
+- If alerts stop: Vercel → Logs, look for "Telegram Notification Failed" (it gives the
+  reason). Deleting `TG_TEMPLATE` and redeploying goes back to the default message.
+- If the token ever leaks: @BotFather → `/revoke`, then put the new token in Vercel.
 
 ## Things to know
 
