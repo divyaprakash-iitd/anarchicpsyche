@@ -115,6 +115,8 @@ to Hugo + Blowfish on GitHub Pages.
 
 1. **Comments: done (Nov 2026), Waline.** Readers comment with just a name (email optional).
    - Plain-language explainer for DP: `docs/comments.md` (keep it in sync with changes).
+   - Telegram alerts on (Vercel env `TG_BOT_TOKEN`, `TG_CHAT_ID`, English `TG_TEMPLATE`,
+     MarkdownV2); `DISABLE_REGION` / `DISABLE_USERAGENT` = true (no location/browser tags).
    - Server: Vercel project `anarchicpsyche-comments` (Hobby; non-commercial only) +
      Neon Postgres (free, Singapore), connected via the Vercel Marketplace with env prefix
      `POSTGRES`. `walineServerURL = "https://anarchicpsyche-comments.vercel.app"` in
